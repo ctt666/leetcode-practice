@@ -24,6 +24,7 @@ func solve(board [][]byte) bool {
 			}
 		}
 	}
+
 	return true
 }
 

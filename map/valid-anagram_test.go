@@ -12,6 +12,7 @@ func isAnagram(s string, t string) bool {
 		return false
 	}
 	m := make(map[byte]int)
+	//删除条件
 	for i := range s {
 		m[s[i]]++
 		m[t[i]]--

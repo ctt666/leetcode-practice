@@ -1,5 +1,6 @@
 package tree
 
+//TODO
 type Trie struct {
 	IsWord   bool
 	Children [26]*Trie
