@@ -31,7 +31,7 @@ func reverse(head, tail *ListNode) (*ListNode, *ListNode) {
 	var pre *ListNode
 	cur := head
 	//退出条件
-	for head != tail.Next {
+	for cur != tail.Next {
 		cur, cur.Next, pre = cur.Next, pre, cur
 	}
 

@@ -24,7 +24,7 @@ func hasCycle(root *Node) int {
 		return 0
 	}
 
-	count := 0
+	count := 1
 	for p2 != p1.Next {
 		p1 = p1.Next
 		count++

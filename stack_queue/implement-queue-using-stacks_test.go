@@ -1,19 +1,14 @@
 package stack_queue
 
-import (
-	"fmt"
-	"testing"
-)
-
 type MyQueue struct {
 	input  []int
 	output []int
 }
 
 /** Initialize your data structure here. */
-func Constructor() MyQueue {
-	return MyQueue{}
-}
+//func Constructor() MyQueue {
+//	return MyQueue{}
+//}
 
 /** Push element x to the back of queue. */
 func (this *MyQueue) Push(x int) {
@@ -49,14 +44,14 @@ func (this *MyQueue) Empty() bool {
 	return len(this.input) == 0 && len(this.output) == 0
 }
 
-func TestQueue(t *testing.T) {
-	obj := Constructor()
-	obj.Push(1)
-	obj.Push(2)
-	fmt.Println(obj.Pop())
-	fmt.Println(obj.Pop())
-	fmt.Println(obj.Empty())
-}
+//func TestQueue(t *testing.T) {
+//	obj := Constructor()
+//	obj.Push(1)
+//	obj.Push(2)
+//	fmt.Println(obj.Pop())
+//	fmt.Println(obj.Pop())
+//	fmt.Println(obj.Empty())
+//}
 
 /**
  * Your MyQueue object will be instantiated and called as such:

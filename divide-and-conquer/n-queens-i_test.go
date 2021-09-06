@@ -31,7 +31,7 @@ func solveNQueens(n int) (result [][]string) {
 			col[j] = false
 			pie[row-j] = false
 			na[row+j] = false
-			queen[row] = -1
+			//queen[row] = -1
 		}
 	}
 	dfs(0)
