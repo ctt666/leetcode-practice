@@ -30,16 +30,16 @@ func solve(board [][]byte) bool {
 
 func isValid(board [][]byte, row, col int, c byte) bool {
 	for i := 0; i < 9; i++ {
-		if board[i][col] != '.' && board[i][col] == c {
+		if board[i][col] == c {
 			return false
 		}
-		if board[row][i] != '.' && board[row][i] == c {
+		if board[row][i] == c {
 			return false
 		}
 		//block
 		//行(row/3)*3+i/3
 		//列(col/3)*3+i%3
-		if board[3*(row/3)+i/3][3*(col/3)+i%3] != '.' && board[3*(row/3)+i/3][3*(col/3)+i%3] == c {
+		if board[3*(row/3)+i/3][3*(col/3)+i%3] == c {
 			return false
 		}
 	}

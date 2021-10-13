@@ -15,12 +15,17 @@ type Node struct {
 //2,4,4,7,8,9
 func insert(p *Node, k int) {
 	if p == nil {
+		p = &Node{
+			Next:  p,
+			Value: k,
+		}
 		return
 	}
 
 	m := make(map[*Node]bool)
-	pre := p
-	p = p.Next
+	pre := &Node{
+		Next: p,
+	}
 
 	for !m[p] {
 		m[p] = true
