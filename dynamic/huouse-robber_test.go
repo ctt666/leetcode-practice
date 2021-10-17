@@ -1,5 +1,7 @@
 package dynamic
 
+//f(i) = max(C[i] + f(i-2), f(i-1))
+
 func rob(nums []int) int {
 	length := len(nums)
 	if length == 1 {

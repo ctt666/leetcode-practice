@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+//明确链表反转过程改变的节点，以及新链表的连接边界
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	pre := &ListNode{
 		Next: head,
@@ -31,17 +32,14 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 		cur = cur.Next
 		right--
 	}
-	fmt.Println(cur.Next)
+	next := cur.Next
 
 	if left > 1 || right > 1 {
 		return head
 	}
-	fmt.Println(cur.Next)
 	pLeft, pRight = reverse2(pLeft, pRight)
-	fmt.Println(cur.Next)
-	fmt.Println(pLeft, pRight)
 	pre.Next = pLeft
-	pRight.Next = cur.Next
+	pRight.Next = next
 	return dummy.Next
 }
 

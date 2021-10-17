@@ -1,5 +1,6 @@
 package tree
 
+//TODO
 type Trie struct {
 	IsWord   bool
 	Children [26]*Trie
@@ -25,28 +26,12 @@ func (this *Trie) Insert(word string) {
 
 /** Returns if the word is in the trie. */
 func (this *Trie) Search(word string) bool {
-	//node := this
-	//for _, v := range word {
-	//	if node.Children[v - 'a'] == nil {
-	//		return false
-	//	}
-	//	node = node.Children[v - 'a']
-	//}
-	//return node.IsWord
 	node := this.SearchPrefix(word)
 	return node != nil && node.IsWord
 }
 
 /** Returns if there is any word in the trie that starts with the given prefix. */
 func (this *Trie) StartsWith(prefix string) bool {
-	//node := this
-	//for _, v := range prefix {
-	//	if node.Children[v - 'a'] == nil {
-	//		return false
-	//	}
-	//	node = node.Children[v - 'a']
-	//}
-	//return true
 	return this.SearchPrefix(prefix) != nil
 }
 
