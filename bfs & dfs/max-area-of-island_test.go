@@ -1,5 +1,8 @@
 package bfs___dfs
 
+//问题：求解坐标值为1的连续最大面积
+//典型广度优先/深度优先问题
+//trick：计算后清零；递归返回条件
 func maxAreaOfIsland(grid [][]int) int {
 	column := len(grid[0])
 	row := len(grid)

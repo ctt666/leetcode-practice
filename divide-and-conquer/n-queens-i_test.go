@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+//trick：将递归函数作为匿名，可以享受闭包带来的好处--参数访问
+//		 下次遍历还原
 func solveNQueens(n int) (result [][]string) {
 	if n < 1 {
 		return nil

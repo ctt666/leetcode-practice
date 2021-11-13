@@ -1,5 +1,8 @@
 package bfs___dfs
 
+//问题：以某点为中心，向四周扩散并替换某数字
+//典型广度/深度优先
+//trick：使用二维数组存储点的坐标
 func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	if image[sr][sc] == newColor {
 		return image
