@@ -30,5 +30,6 @@ func findDuplicate(nums []int) int {
 			ans = mid
 		}
 	}
+
 	return ans
 }
