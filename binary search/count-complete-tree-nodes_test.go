@@ -25,6 +25,7 @@ func countNodes(root *TreeNode) int {
 	for node := root; node.Left != nil; node = node.Left {
 		level++
 	}
+	//二分查找第一个k，使得节点为nil
 	return sort.Search(1<<(level+1), func(k int) bool {
 		if k <= 1<<level {
 			return false
